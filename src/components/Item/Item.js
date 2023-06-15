@@ -1,8 +1,10 @@
 import './Item.css'
 import { Link } from 'react-router-dom';
+import { getFirestore } from "firebase/firestore";
 
 const Item = ({id, name, img, price, stock}) => {
-    
+    const db = getFirestore();
+
     return (
         <article className="CardItem">
             <header className="Header">

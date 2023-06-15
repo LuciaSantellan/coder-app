@@ -9,7 +9,11 @@ const NavBar = () => {
                 <h1>Lucia Beauty Studio</h1>
             </Link>
             <div className='navBar'>
-                <NavLink to={'./category/servicios'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Servicios</NavLink>
+                <NavLink to={'./category/inicio'} className={({isActive}) => isActive ? 'ActiveOption boton' : 'Option boton'} >Inicio</NavLink>
+                <NavLink to={'./category/manos'} className={({isActive}) => isActive ? 'ActiveOption boton' : 'Option boton'} >Manos</NavLink>
+                <NavLink to={'./category/pies'} className={({isActive}) => isActive ? 'ActiveOption boton' : 'Option boton'} >Pies</NavLink>
+                <NavLink to={'./category/contacto'} className={({isActive}) => isActive ? 'ActiveOption boton' : 'Option boton'} >Contacto</NavLink>
+
             </div>
             <CartWidget />
         </nav>

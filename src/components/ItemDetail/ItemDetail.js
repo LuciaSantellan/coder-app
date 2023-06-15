@@ -3,8 +3,10 @@ import { useContext, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
+import { getFirestore } from "firebase/firestore";
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+    const db = getFirestore();
     const [quantityAdded, setQuantityAdded] = useState (0)
 
     const { addItem } = useContext(CartContext)
