@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { getFirestore } from "firebase/firestore";
 
-const ItemDetail = ({id, name, img, category, description, price, stock}) => {
+const ItemDetail = ({id, name, imageId, category, description, price, stock}) => {
     const db = getFirestore();
     const [quantityAdded, setQuantityAdded] = useState (0)
 
@@ -28,7 +28,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg"/>
+                <img src={imageId} alt={name} className="ItemImg"/>
             </picture>
             <section>
                 <p className="Info">
