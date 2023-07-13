@@ -17,7 +17,7 @@ const ItemListContainer = ({ greeting }) => {
         const collectionRef = categoryId
             ? query(
                   collection(db, "items"),
-                  where("category", "==", categoryId)
+                  where("categoryId", "==", categoryId)
               )
             : collection(db, "items");
 
